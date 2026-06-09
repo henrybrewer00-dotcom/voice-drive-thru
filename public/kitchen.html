@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kitchen Display · Lily's Drive-Thru</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/kitchen.css" />
+</head>
+<body class="kitchen-body">
+  <header class="kds-topbar">
+    <div class="brand">
+      <div class="logo"><span class="logo-emoji">👨‍🍳</span></div>
+      <div class="brand-text">
+        <h1>Kitchen Display</h1>
+        <p class="tag">Lily's Drive-Thru · live orders</p>
+      </div>
+    </div>
+    <div class="kds-meta">
+      <div class="kds-stat" id="statNew"><span class="stat-num">0</span><span class="stat-label">New</span></div>
+      <div class="kds-stat" id="statProgress"><span class="stat-num">0</span><span class="stat-label">In Progress</span></div>
+      <div class="kds-stat" id="statReady"><span class="stat-num">0</span><span class="stat-label">Ready</span></div>
+      <div class="kds-stat connection" id="statConn"><span class="conn-dot"></span><span>Connecting…</span></div>
+    </div>
+  </header>
+
+  <main class="kds-board" id="board">
+    <div class="kds-empty">
+      <div class="kds-empty-icon">🍳</div>
+      <h2>No orders yet</h2>
+      <p>New orders from the drive-thru will appear here in real-time.</p>
+    </div>
+  </main>
+
+  <script src="/kitchen.js"></script>
+</body>
+</html>

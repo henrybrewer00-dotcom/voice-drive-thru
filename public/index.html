@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lily's Drive-Thru</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">
+          <span class="logo-emoji">🍔</span>
+        </div>
+        <div class="brand-text">
+          <h1>Lily's Drive-Thru</h1>
+          <p class="tag">Open 24/7 · Voice ordering</p>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <a href="/kitchen.html" target="_blank" class="kitchen-link">
+          <span>👨‍🍳</span>
+          <span>Open Kitchen Display</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="menu-panel">
+        <div class="menu-header">
+          <div>
+            <h2>Menu</h2>
+            <p class="menu-sub">Just say what you'd like — Lily takes it from there</p>
+          </div>
+        </div>
+        <nav class="cat-nav" id="catNav"></nav>
+        <div id="menu" class="menu"></div>
+      </section>
+
+      <aside class="order-panel">
+        <div class="order-header">
+          <div>
+            <h2>Your Order</h2>
+            <p class="order-num" id="orderNum">Order #—</p>
+          </div>
+          <span id="orderState" class="state-pill state-empty">Empty</span>
+        </div>
+
+        <div id="orderLines" class="order-lines">
+          <div class="empty-state">
+            <div class="empty-icon">🎙</div>
+            <p class="empty-title">Ready to order?</p>
+            <p class="small">Tap the mic and tell Lily what you want.</p>
+          </div>
+        </div>
+
+        <div class="order-totals">
+          <div class="total-row">
+            <span>Subtotal</span>
+            <span id="subtotal">$0.00</span>
+          </div>
+          <div class="total-row discount" id="discountRow" style="display:none">
+            <span id="discountLabel">Discount</span>
+            <span id="discountAmount">-$0.00</span>
+          </div>
+          <div class="total-row">
+            <span>Tax (8.75%)</span>
+            <span id="tax">$0.00</span>
+          </div>
+          <div class="total-row total">
+            <span>Total</span>
+            <span id="total">$0.00</span>
+          </div>
+        </div>
+
+        <div class="mic-area">
+          <div class="voice-bars" id="voiceBars" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <button id="micBtn" class="mic-btn idle">
+            <span class="mic-icon">🎙</span>
+            <span class="mic-label">Tap to order</span>
+          </button>
+          <p class="mic-hint" id="micHint">Lily greets you when you tap</p>
+        </div>
+      </aside>
+    </main>
+
+    <div id="transcript" class="transcript"></div>
+
+    <div id="confirmedSplash" class="splash hidden">
+      <div class="splash-card">
+        <div class="splash-check">✓</div>
+        <h2>Order Confirmed</h2>
+        <p class="splash-sub">Please pull around to the next window</p>
+        <div class="splash-total" id="splashTotal">$0.00</div>
+        <button id="splashClose" class="splash-btn">New Order</button>
+      </div>
+    </div>
+
+    <div id="status" class="status hidden"></div>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
