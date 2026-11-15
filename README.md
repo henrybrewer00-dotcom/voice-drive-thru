@@ -100,3 +100,7 @@ the kitchen screen.
 ## License
 
 Private / unlicensed — personal project.
+
+---
+
+Built by [Henry Brewer](https://www.henrybrewer.dev), a 14-year-old developer from Austin.
